@@ -13,9 +13,10 @@ nav:
 <div class="team-grid-wrapper">
   <div class="team-grid">
 
-    {% assign faculty = site.members | where: "role", "Faculty" %}
-    {% assign students = site.members | where_exp: "item", "item.role != 'Faculty' and item.role != 'Undergrad' and item.role != 'alumni'" | sort: "lastname" %}
-    {% assign team = faculty | concat: students %}
+    {% assign faculty = site.members | where: "role", "Faculty" | sort: "lastname" %}
+    {% assign postdocs = site.members | where: "role", "Postdoc" | sort: "lastname" %}
+    {% assign students = site.members | where_exp: "item", "item.role != 'Faculty' and item.role != 'Postdoc' and item.role != 'Undergrad' and item.role != 'alumni'" | sort: "lastname" %}
+    {% assign team = faculty | concat: postdocs | concat: students %}
 
     {% for member in team %}
       {% include portrait.html 
