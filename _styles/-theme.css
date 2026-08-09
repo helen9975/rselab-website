@@ -208,15 +208,12 @@ img.full-background {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .hero-image-wrapper {
   position: relative;
-  width: 90%;
+  width: 100%;
   overflow: hidden;
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
   display: grid;
   place-items: center;
   min-height: clamp(300px, 30vw, 460px);
@@ -235,6 +232,18 @@ img.full-background {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.55) 45%, rgba(0, 0, 0, 0.55) 65%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.hero-image-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--background));
+  pointer-events: none;
 }
 
 .hero-text {
