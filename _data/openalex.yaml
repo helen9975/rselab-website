@@ -1,0 +1,33 @@
+# Automatically pull publications from OpenAlex (https://openalex.org).
+#
+# Find an author id by searching:
+#   https://api.openalex.org/authors?search=Firstname%20Lastname
+# and taking the trailing part of the "id" url, e.g. A5108257764.
+#
+# Each work with a DOI is handed to Manubot for full citation details, exactly
+# like a hand-written entry in sources.yaml. Anything you also list by hand in
+# sources.yaml (thumbnail, description, buttons, tags, awards) is merged on top
+# and wins, so curating a paper and auto-pulling it are not in conflict.
+#
+# To hide something that gets pulled in, add it to sources.yaml with:
+#   - id: doi:10.1234/whatever
+#     remove: true
+#
+# Options, all optional except "author":
+#   from-year / to-year   only include works published in this range
+#   types                 only include these OpenAlex work types
+#   exclude-types         include everything except these types
+#   require-doi           skip works with no DOI or PubMed id
+#   dedupe-versions       collapse arXiv preprint + published version of the
+#                         same paper, preferring published (defaults to true)
+#
+# Types seen on this author's record: preprint, conference-paper, article,
+# book-chapter, dataset, report, book, conference-abstract, editorial, other.
+
+- author: A5108257764 # Dieter Fox
+  from-year: 2024
+  exclude-types:
+    - dataset
+    - editorial
+    - other
+    - conference-abstract

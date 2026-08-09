@@ -37,21 +37,15 @@
 
 - id: doi:10.48550/arXiv.2407.00278
 
-- id: doi:10.48550/arXiv.2405.11656
+- id: doi:10.15607/rss.2024.xx.124
 
 - id: doi:10.48550/arXiv.2404.12308
 
-- id: doi:10.48550/arXiv.2402.08191
-
-- id: https://openreview.net/forum?id=nIU0ZFmptX
+- id: doi:10.15607/rss.2024.xx.133
 
 - id: doi:10.48550/arXiv.2311.02337
 
 - id: doi:10.48550/arXiv.2311.00926
-
-- id: doi:10.48550/arXiv.2310.17274
-
-- id: https://openreview.net/forum?id=dsw5CNOVn1
 
 - id: doi:10.48550/arXiv.2310.07018
 
@@ -64,8 +58,29 @@
 - id: doi:10.48550/arXiv.2303.15771
 
 - id: https://openreview.net/forum?id=aQnn9cIVTRJ
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'Motion Policy Networks'
+  authors:
+    - Adam Fishman
+    - Adithyavairavan Murali
+    - Clemens Eppner
+    - Bryan Peele
+    - Byron Boots
+    - Dieter Fox
+  date: '2022-08-15'
+  link: https://openreview.net/forum?id=aQnn9cIVTRJ
 
 - id: https://openreview.net/forum?id=PS_eCS_WCvD
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation'
+  authors:
+    - Mohit Shridhar
+    - Lucas Manuelli
+    - Dieter Fox
+  date: '2022-08-15'
+  link: https://openreview.net/forum?id=PS_eCS_WCvD
 
 - id: doi:10.48550/arXiv.2210.13638
 
@@ -88,22 +103,117 @@
 - id: doi:10.1109/LRA.2022.3142441
 
 - id: https://openreview.net/forum?id=AL4FPs84YdQ
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'Semantic Terrain Classification for Off-Road Autonomous Driving'
+  authors:
+    - Amirreza Shaban
+    - Xiangyun Meng
+    - JoonHo Lee
+    - Byron Boots
+    - Dieter Fox
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=AL4FPs84YdQ
 
 - id: https://openreview.net/forum?id=9uFiX_HRsIL
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'CLIPort: What and Where Pathways for Robotic Manipulation'
+  authors:
+    - Mohit Shridhar
+    - Lucas Manuelli
+    - Dieter Fox
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=9uFiX_HRsIL
 
 - id: https://openreview.net/forum?id=mOLu2rODIJF
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'SORNet: Spatial Object-Centric Representations for Sequential Manipulation'
+  authors:
+    - Wentao Yuan
+    - Chris Paxton
+    - Karthik Desingh
+    - Dieter Fox
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=mOLu2rODIJF
 
 - id: https://openreview.net/forum?id=5DjX89Wyhk-
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'Predicting Stable Configurations for Semantic Placement of Novel Objects'
+  authors:
+    - Chris Paxton
+    - Chris Xie
+    - Tucker Hermans
+    - Dieter Fox
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=5DjX89Wyhk-
 
 - id: https://openreview.net/forum?id=dgQdvPZnH-t
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'LanguageRefer: Spatial-Language Model for 3D Visual Grounding'
+  authors:
+    - Junha Roh
+    - Karthik Desingh
+    - Ali Farhadi
+    - Dieter Fox
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=dgQdvPZnH-t
 
 - id: https://openreview.net/forum?id=0f7gUXVAcE9
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'RICE: Refining Instance Masks in Cluttered Environments with Graph Neural Networks'
+  authors:
+    - Chris Xie
+    - Arsalan Mousavian
+    - Yu Xiang
+    - Dieter Fox
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=0f7gUXVAcE9
 
 - id: https://openreview.net/forum?id=ceOmpjMhlyS
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'STORM: An Integrated Framework for Fast Joint-Space Model-Predictive Control for Reactive Manipulation'
+  authors:
+    - Mohak Bhardwaj
+    - Balakumar Sundaralingam
+    - Arsalan Mousavian
+    - Nathan D. Ratliff
+    - Dieter Fox
+    - Fabio Ramos
+    - Byron Boots
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=ceOmpjMhlyS
 
 - id: https://openreview.net/forum?id=jOSWHddP1fZ
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'Goal-Auxiliary Actor-Critic for 6D Robotic Grasping with Point Clouds'
+  authors:
+    - Lirui Wang
+    - Yu Xiang
+    - Wei Yang
+    - Arsalan Mousavian
+    - Dieter Fox
+  date: '2021-06-19'
+  link: https://openreview.net/forum?id=jOSWHddP1fZ
 
 - id: https://openreview.net/forum?id=sciA_xgYofB
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'Impossibly Good Experts and How to Follow Them'
+  authors:
+    - Aaron Walsman
+    - Muru Zhang
+    - Sanjiban Choudhury
+    - Dieter Fox
+    - Ali Farhadi
+  date: '2022-09-29'
+  link: https://openreview.net/forum?id=sciA_xgYofB
 
 - id: doi:10.1109/IROS51168.2021.9636037
 
@@ -134,6 +244,19 @@
 - id: doi:10.48550/arXiv.2003.07990
 
 - id: https://openreview.net/forum?id=PTnGQQNgKn
+  # metadata pinned by hand: OpenReview serves Manubot a bot-challenge
+  # page instead of the paper, which otherwise overwrites these fields
+  title: 'Sim-to-Real Task Planning and Execution from Perception via Reactivity and Recovery'
+  authors:
+    - Shohin Mukherjee
+    - Chris Paxton
+    - Arsalan Mousavian
+    - Adam Fishman
+    - Maxim Likhachev
+    - Dieter Fox
+  publisher: 'CoRR'
+  date: '2020-01-01'
+  link: https://openreview.net/forum?id=PTnGQQNgKn
 
 - id: doi:10.1007/978-3-030-58558-7_43
 

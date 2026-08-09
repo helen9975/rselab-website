@@ -29,7 +29,7 @@ log("Compiling sources")
 sources = []
 
 # in-order list of plugins to run
-plugins = ["google-scholar", "pubmed", "orcid", "sources"]
+plugins = ["google-scholar", "pubmed", "orcid", "openalex", "sources"]
 
 # loop through plugins
 for plugin in plugins:
@@ -51,10 +51,11 @@ for plugin in plugins:
         # load data from file
         try:
             data = load_data(file)
-            print(data)
             # check if file in correct format
             if not list_of_dicts(data):
                 raise Exception(f"{file.name} data file not a list of dicts")
+            # an empty or fully commented-out data file parses to None
+            data = data or []
         except Exception as e:
             log(e, indent=2, level="ERROR")
             errors.append(e)
@@ -98,12 +99,14 @@ for plugin in plugins:
 log("Merging sources by id")
 
 # merge sources with matching (non-blank) ids
+# compare case-insensitively, because dois are case-insensitive and different
+# plugins report them with different casing (e.g. arXiv vs arxiv)
 for a in range(0, len(sources)):
-    a_id = get_safe(sources, f"{a}.id", "")
+    a_id = str(get_safe(sources, f"{a}.id", "")).lower()
     if not a_id:
         continue
     for b in range(a + 1, len(sources)):
-        b_id = get_safe(sources, f"{b}.id", "")
+        b_id = str(get_safe(sources, f"{b}.id", "")).lower()
         if b_id == a_id:
             log(f"Found duplicate {b_id}", indent=2)
             sources[a].update(sources[b])

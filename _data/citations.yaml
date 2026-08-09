@@ -1,5 +1,412 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
+- id: doi:10.15607/rss.2024.xx.055
+  title: 'RVT-2: Learning Precise Manipulation from Few Demonstrations'
+  authors:
+  - Ankit Goyal
+  - Valts Blukis
+  - Jie Xu
+  - Yijie Guo
+  - Yu-Wei Chao
+  - Dieter Fox
+  publisher: 'Robotics: Science and Systems XX'
+  date: '2024-07-15'
+  link: https://doi.org/g8753s
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.15607/rss.2024.xx.133
+  title: 'THE COLOSSEUM: A Benchmark for Evaluating Generalization for Robotic Manipulation'
+  authors:
+  - Wilbert Pumacay
+  - Ishika Singh
+  - Jiafei Duan
+  - Ranjay Krishna
+  - Jesse Thomason
+  - Dieter Fox
+  publisher: 'Robotics: Science and Systems XX'
+  date: '2024-07-15'
+  link: https://doi.org/g8753r
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/icra55743.2025.11128705
+  title: Guiding Long-Horizon Task and Motion Planning with Vision Language Models
+  authors:
+  - Zhutian Yang
+  - Caelan Garrett
+  - Dieter Fox
+  - "Tom\xE1s Lozano-P\xE9rez"
+  - Leslie Pack Kaelbling
+  publisher: 2025 IEEE International Conference on Robotics and Automation (ICRA)
+  date: '2025-05-19'
+  link: https://doi.org/hcd7hj
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.15607/rss.2024.xx.124
+  title: 'URDFormer: A Pipeline for Constructing Articulated Simulation Environments
+    from Real-World Images'
+  authors:
+  - Qiuyu Chen
+  - Aaron Walsman
+  - Marius Memmel
+  - Kaichun Mo
+  - Alex Fang
+  - Dieter Fox
+  - Abhishek Gupta
+  publisher: 'Robotics: Science and Systems XX'
+  date: '2024-07-15'
+  link: https://doi.org/g8754w
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/tro.2025.3547267
+  title: 'TacSL: A Library for Visuotactile Sensor Simulation and Learning'
+  authors:
+  - Iretiayo Akinola
+  - Jie Xu
+  - Jan Carius
+  - Dieter Fox
+  - Yashraj Narang
+  publisher: IEEE Transactions on Robotics
+  date: '2025-01-01'
+  link: https://doi.org/g8756x
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/cvpr52733.2024.00303
+  title: Neural Implicit Representation for Building Digital Twins of Unknown Articulated
+    Objects
+  authors:
+  - Yijia Weng
+  - Bowen Wen
+  - Jonathan Tremblay
+  - Valts Blukis
+  - Dieter Fox
+  - Leonidas Guibas
+  - Stan Birchfield
+  publisher: 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)
+  date: '2024-06-16'
+  link: https://doi.org/g8755p
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.15607/rss.2024.xx.064
+  title: 'AutoMate: Specialist and Generalist Assembly Policies over Diverse Geometries'
+  authors:
+  - Bingjie Tang
+  - Iretiayo Akinola
+  - Jie Xu
+  - Bowen Wen
+  - Ankur Handa
+  - Karl Wyk
+  - Dieter Fox
+  - Gaurav Sukhatme
+  - Fabio Ramos
+  - Yashraj Narang
+  publisher: 'Robotics: Science and Systems XX'
+  date: '2024-07-15'
+  link: https://doi.org/g8756f
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/lra.2025.3551637
+  title: 'FORGE: Force-Guided Exploration for Robust Contact-Rich Manipulation Under
+    Uncertainty'
+  authors:
+  - Michael Noseworthy
+  - Bingjie Tang
+  - Bowen Wen
+  - Ankur Handa
+  - Chad Kessens
+  - Nicholas Roy
+  - Dieter Fox
+  - Fabio Ramos
+  - Yashraj Narang
+  - Iretiayo Akinola
+  publisher: IEEE Robotics and Automation Letters
+  date: '2025-05-01'
+  link: https://doi.org/hcd7hk
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/iros58592.2024.10802746
+  title: 'DiMSam: Diffusion Models as Samplers for Task and Motion Planning under
+    Partial Observability'
+  authors:
+  - Xiaolin Fang
+  - Caelan Reed Garrett
+  - Clemens Eppner
+  - "Tom\xE1s Lozano-P\xE9rez"
+  - Leslie Pack Kaelbling
+  - Dieter Fox
+  publisher: 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems
+    (IROS)
+  date: '2024-10-14'
+  link: https://doi.org/g8754k
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1146/annurev-control-031924-100130
+  title: 'The Reality Gap in Robotics: Challenges, Solutions, and Best Practices'
+  authors:
+  - Elie Aljalbout
+  - Jiaxu Xing
+  - Angel Romero
+  - Iretiayo Akinola
+  - Caelan Reed Garrett
+  - Eric Heiden
+  - Abhishek Gupta
+  - Tucker Hermans
+  - Yashraj Narang
+  - Dieter Fox
+  - Davide Scaramuzza
+  - Fabio Ramos
+  publisher: Annual Review of Control, Robotics, and Autonomous Systems
+  date: '2026-05-05'
+  link: https://doi.org/hcd7hm
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/iros58592.2024.10801523
+  title: 'IntervenGen: Interventional Data Generation for Robust and Data-Efficient
+    Robot Imitation Learning'
+  authors:
+  - Ryan Hoque
+  - Ajay Mandlekar
+  - Caelan Garrett
+  - Ken Goldberg
+  - Dieter Fox
+  publisher: 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems
+    (IROS)
+  date: '2024-10-14'
+  link: https://doi.org/g87554
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/icra55743.2025.11127931
+  title: Inference-Time Policy Steering Through Human Interactions
+  authors:
+  - Yanwei Wang
+  - Lirui Wang
+  - Yilun Du
+  - Balakumar Sundaralingam
+  - Xuning Yang
+  - Yu-Wei Chao
+  - "Claudia P\xE9rez-D\u2019Arpino"
+  - Dieter Fox
+  - Julie Shah
+  publisher: 2025 IEEE International Conference on Robotics and Automation (ICRA)
+  date: '2025-05-19'
+  link: https://doi.org/hcd7hn
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1145/3654777.3676413
+  title: 'EVE: Enabling Anyone to Train Robots using Augmented Reality'
+  authors:
+  - Jun Wang
+  - Chun-Cheng Chang
+  - Jiafei Duan
+  - Dieter Fox
+  - Ranjay Krishna
+  publisher: Proceedings of the 37th Annual ACM Symposium on User Interface Software
+    and Technology
+  date: '2024-10-11'
+  link: https://doi.org/g8756w
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/LRA.2025.3542323
+  title: 'Aim My Robot: Precision Local Navigation to Any Object'
+  authors:
+  - Xiangyun Meng
+  - Xuning Yang
+  - Sanghun Jung
+  - Fabio Ramos
+  - Sri Sadhan Jujjavarapu
+  - Sanjoy Paul
+  - Dieter Fox
+  publisher: IEEE Robotics and Automation Letters
+  date: '2025-04-01'
+  link: https://doi.org/g858zn
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arxiv.2501.03575
+  title: Cosmos World Foundation Model Platform for Physical AI
+  authors:
+  - Niket Agarwal
+  - Arslan Ali
+  - Maciej Bala
+  - Yogesh Balaji
+  - Erik Barker
+  - Tiffany Cai
+  - Prithvijit Chattopadhyay
+  - Yongxin Chen
+  - Yin Cui
+  - Yifan Ding
+  - Daniel Dworakowski
+  - Jiaojiao Fan
+  - Michele Fenzi
+  - Francesco Ferroni
+  - Sanja Fidler
+  - Dieter Fox
+  - Songwei Ge
+  - Yunhao Ge
+  - Jinwei Gu
+  - Siddharth Gururani
+  - Ethan He
+  - Jiahui Huang
+  - Jacob Huffman
+  - Pooya Jannaty
+  - Jingyi Jin
+  - Seung Wook Kim
+  - "Gergely Kl\xE1r"
+  - Grace Lam
+  - Shiyi Lan
+  - Laura Leal-Taixe
+  - Anqi Li
+  - Zhaoshuo Li
+  - Chen-Hsuan Lin
+  - Tsung-Yi Lin
+  - Huan Ling
+  - Ming-Yu Liu
+  - Xian Liu
+  - Alice Luo
+  - Qianli Ma
+  - Hanzi Mao
+  - Kaichun Mo
+  - Arsalan Mousavian
+  - Seungjun Nah
+  - Sriharsha Niverty
+  - David Page
+  - Despoina Paschalidou
+  - Zeeshan Patel
+  - Lindsey Pavao
+  - Morteza Ramezanali
+  - Fitsum Reda
+  - Xiaowei Ren
+  - Vasanth Rao Naik Sabavat
+  - Ed Schmerling
+  - Stella Shi
+  - Bartosz Stefaniak
+  - Shitao Tang
+  - Lyne Tchapmi
+  - Przemek Tredak
+  - Wei-Cheng Tseng
+  - Jibin Varghese
+  - Hao Wang
+  - Haoxiang Wang
+  - Heng Wang
+  - Ting-Chun Wang
+  - Fangyin Wei
+  - Xinyue Wei
+  - Jay Zhangjie Wu
+  - Jiashu Xu
+  - Wei Yang
+  - Lin Yen-Chen
+  - Xiaohui Zeng
+  - Yu Zeng
+  - Jing Zhang
+  - Qinsheng Zhang
+  - Yuxuan Zhang
+  - Qingqing Zhao
+  - Artur Zolkowski
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/g88qtd
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arXiv.2406.18915
+  title: 'Manipulate-Anything: Automating Real-World Robots using Vision-Language
+    Models'
+  authors:
+  - Jiafei Duan
+  - Wentao Yuan
+  - Wilbert Pumacay
+  - Yi Ru Wang
+  - Kiana Ehsani
+  - Dieter Fox
+  - Ranjay Krishna
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qtz
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2410.00371
+  title: 'AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in
+    Robotic Manipulation'
+  authors:
+  - Jiafei Duan
+  - Wilbert Pumacay
+  - Nishanth Kumar
+  - Yi Ru Wang
+  - Shulin Tian
+  - Wentao Yuan
+  - Ranjay Krishna
+  - Dieter Fox
+  - Ajay Mandlekar
+  - Yijie Guo
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qtp
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2406.10721
+  title: 'RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for
+    Robotics'
+  authors:
+  - Wentao Yuan
+  - Jiafei Duan
+  - Valts Blukis
+  - Wilbert Pumacay
+  - Ranjay Krishna
+  - Adithyavairavan Murali
+  - Arsalan Mousavian
+  - Dieter Fox
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qt3
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/case58245.2025.11163870
+  title: Benchmarking Population-Based Reinforcement Learning across Robotic Tasks
+    with GPU-Accelerated Simulation
+  authors:
+  - Asad Ali Shahid
+  - Yashraj Narang
+  - Vincenzo Petrone
+  - Enrico Ferrentino
+  - Ankur Handa
+  - Dieter Fox
+  - Marco Pavone
+  - Loris Roveda
+  publisher: 2025 IEEE 21st International Conference on Automation Science and Engineering
+    (CASE)
+  date: '2025-08-17'
+  link: https://doi.org/hcd7hs
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2410.18065
+  title: 'SPIRE: Synergistic Planning, Imitation, and Reinforcement Learning for Long-Horizon
+    Manipulation'
+  authors:
+  - Zihan Zhou
+  - Animesh Garg
+  - Dieter Fox
+  - Caelan Garrett
+  - Ajay Mandlekar
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qth
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arXiv.2411.19309
+  title: 'GRAPE: Generalizing Robot Policy via Preference Alignment'
+  authors:
+  - Zijian Zhang
+  - Kaiyuan Zheng
+  - Zhaorun Chen
+  - Joel Jang
+  - Yi Li
+  - Siwei Han
+  - Chaoqi Wang
+  - Mingyu Ding
+  - Dieter Fox
+  - Huaxiu Yao
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g87dq8
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.48550/arXiv.2502.05485
   title: 'HAMSTER: Hierarchical Action Models For Open-World Robot Manipulation'
   authors:
@@ -18,6 +425,8 @@
   publisher: arXiv
   date: '2025-01-01'
   link: https://doi.org/g86b5v
+  plugin: sources.py
+  file: sources.yaml
   description: This work proposes a hierarchical vision-language-action (VLA) model
     that improves robot generalization by using off-domain data (like videos or simulations).
     Instead of predicting actions directly, a high-level model generates a 2D path,
@@ -31,55 +440,81 @@
   tags:
   - behaviour cloning
   - vision language action
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.1703.01656
-  title: Reasoning About Liquids via Closed-Loop Simulation
+- id: doi:10.48550/arxiv.2507.00435
+  title: 'RoboEval: Where Robotic Manipulation Meets Structured and Scalable Evaluation'
   authors:
-  - Connor Schenck
-  - Dieter Fox
-  publisher: arXiv
-  date: '2017-01-01'
-  link: https://doi.org/g88vrf
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2501.18564
-  title: 'SAM2Act: Integrating Visual Foundation Model with A Memory Architecture
-    for Robotic Manipulation'
-  authors:
-  - Haoquan Fang
+  - Yi Ru Wang
+  - Carter Ung
+  - Christopher Tan
+  - Grant Tannert
+  - Jiafei Duan
+  - Josephine Li
+  - Anh Le
+  - Rishabh Oswal
   - Markus Grotz
   - Wilbert Pumacay
-  - Yi Ru Wang
-  - Dieter Fox
+  - Yuquan Deng
   - Ranjay Krishna
-  - Jiafei Duan
+  - Dieter Fox
+  - Siddhartha Srinivasa
   publisher: arXiv
   date: '2025-01-01'
-  link: https://doi.org/g88mbq
-  image: images/Sam2Act_Thumbnail.png
-  buttons:
-  - type: website
-    text: Project Page
-    link: https://sam2act.github.io/
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2411.19309
-  title: 'GRAPE: Generalizing Robot Policy via Preference Alignment'
+  link: https://doi.org/hcd7hp
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2402.02612
+  title: Fast Explicit-Input Assistance for Teleoperation in Clutter
   authors:
-  - Zijian Zhang
-  - Kaiyuan Zheng
-  - Zhaorun Chen
-  - Joel Jang
-  - Yi Li
-  - Siwei Han
-  - Chaoqi Wang
-  - Mingyu Ding
+  - Nick Walker
+  - Xuning Yang
+  - Animesh Garg
+  - Maya Cakmak
   - Dieter Fox
-  - Huaxiu Yao
+  - "Claudia P\xE9rez-D'Arpino"
   publisher: arXiv
   date: '2024-01-01'
-  link: https://doi.org/g87dq8
+  link: https://doi.org/hcd7h8
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2404.07428
+  title: 'AdaDemo: Data-Efficient Demonstration Expansion for Generalist Robotic Agent'
+  authors:
+  - Tongzhou Mu
+  - Yijie Guo
+  - Jie Xu
+  - Ankit Goyal
+  - Hao Su
+  - Dieter Fox
+  - Animesh Garg
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/hcd7h9
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arXiv.2404.12308
+  title: 'ASID: Active Exploration for System Identification in Robotic Manipulation'
+  authors:
+  - Marius Memmel
+  - Andrew Wagenmaker
+  - Chuning Zhu
+  - Patrick Yin
+  - Dieter Fox
+  - Abhishek Gupta
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88q6r
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2407.00278
+  title: 'PerAct2: Benchmarking and Learning for Robotic Bimanual Manipulation Tasks'
+  authors:
+  - Markus Grotz
+  - Mohit Shridhar
+  - Tamim Asfour
+  - Dieter Fox
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qf6
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2410.11758
@@ -104,39 +539,6 @@
   publisher: arXiv
   date: '2024-01-01'
   link: https://doi.org/g88qtk
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1145/3654777.3676413
-  title: 'EVE: Enabling Anyone to Train Robots using Augmented Reality'
-  authors:
-  - Jun Wang
-  - Chun-Cheng Chang
-  - Jiafei Duan
-  - Dieter Fox
-  - Ranjay Krishna
-  publisher: Proceedings of the 37th Annual ACM Symposium on User Interface Software
-    and Technology
-  date: '2024-10-11'
-  link: https://doi.org/g8756w
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2410.00371
-  title: 'AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in
-    Robotic Manipulation'
-  authors:
-  - Jiafei Duan
-  - Wilbert Pumacay
-  - Nishanth Kumar
-  - Yi Ru Wang
-  - Shulin Tian
-  - Wentao Yuan
-  - Ranjay Krishna
-  - Dieter Fox
-  - Ajay Mandlekar
-  - Yijie Guo
-  publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g88qtp
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2409.19494
@@ -167,108 +569,341 @@
   link: https://doi.org/g87577
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.48550/arXiv.2406.18915
-  title: 'Manipulate-Anything: Automating Real-World Robots using Vision-Language
-    Models'
+- id: doi:10.48550/arxiv.2410.16727
+  title: 'DiffusionSeeder: Seeding Motion Optimization with Diffusion for Rapid Motion
+    Planning'
   authors:
-  - Jiafei Duan
-  - Wentao Yuan
+  - Huang Huang
+  - Balakumar Sundaralingam
+  - Arsalan Mousavian
+  - Adithyavairavan Murali
+  - Ken Goldberg
+  - Dieter Fox
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qtj
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2410.18907
+  title: 'SkillMimicGen: Automated Demonstration Generation for Efficient Skill Learning
+    and Deployment'
+  authors:
+  - Caelan Garrett
+  - Ajay Mandlekar
+  - Bowen Wen
+  - Dieter Fox
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qtg
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2411.08253
+  title: Open-World Task and Motion Planning via Vision-Language Model Generated Constraints
+  authors:
+  - Nishanth Kumar
+  - William Shen
+  - Fabio Ramos
+  - Dieter Fox
+  - "Tom\xE1s Lozano-P\xE9rez"
+  - Leslie Pack Kaelbling
+  - Caelan Reed Garrett
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g88qtf
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.21105/joss.07561
+  title: 'scene_synthesizer: A Python Library for Procedural Scene Generation in Robot
+    Manipulation'
+  authors:
+  - Clemens Eppner
+  - Adithyavairavan Murali
+  - Caelan Garrett
+  - "Rowland O\u2019Flaherty"
+  - Tucker Hermans
+  - Wei Yang
+  - Dieter Fox
+  publisher: Journal of Open Source Software
+  date: '2025-01-28'
+  link: https://doi.org/g87572
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arXiv.2501.18564
+  title: 'SAM2Act: Integrating Visual Foundation Model with A Memory Architecture
+    for Robotic Manipulation'
+  authors:
+  - Haoquan Fang
+  - Markus Grotz
   - Wilbert Pumacay
   - Yi Ru Wang
-  - Kiana Ehsani
   - Dieter Fox
   - Ranjay Krishna
-  publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g88qtz
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2406.10721
-  title: 'RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for
-    Robotics'
-  authors:
-  - Wentao Yuan
   - Jiafei Duan
-  - Valts Blukis
-  - Wilbert Pumacay
-  - Ranjay Krishna
-  - Adithyavairavan Murali
-  - Arsalan Mousavian
-  - Dieter Fox
   publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g88qt3
+  date: '2025-01-01'
+  link: https://doi.org/g88mbq
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.48550/arXiv.2407.00278
-  title: 'PerAct2: Benchmarking and Learning for Robotic Bimanual Manipulation Tasks'
+  image: images/Sam2Act_Thumbnail.png
+  buttons:
+  - type: website
+    text: Project Page
+    link: https://sam2act.github.io/
+- id: doi:10.1109/icra55743.2025.11128440
+  title: 'MatchMaker: Automated Asset Generation for Robotic Assembly'
   authors:
-  - Markus Grotz
-  - Mohit Shridhar
-  - Tamim Asfour
+  - Yian Wang
+  - Bingjie Tang
+  - Chuang Gan
   - Dieter Fox
-  publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g88qf6
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2405.11656
-  title: 'URDFormer: A Pipeline for Constructing Articulated Simulation Environments
-    from Real-World Images'
-  authors:
-  - Zoey Chen
-  - Aaron Walsman
-  - Marius Memmel
   - Kaichun Mo
-  - Alex Fang
-  - Karthikeya Vemuri
-  - Alan Wu
-  - Dieter Fox
-  - Abhishek Gupta
-  publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g88q6q
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2404.12308
-  title: 'ASID: Active Exploration for System Identification in Robotic Manipulation'
-  authors:
-  - Marius Memmel
-  - Andrew Wagenmaker
-  - Chuning Zhu
-  - Patrick Yin
-  - Dieter Fox
-  - Abhishek Gupta
-  publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g88q6r
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2402.08191
-  title: 'THE COLOSSEUM: A Benchmark for Evaluating Generalization for Robotic Manipulation'
-  authors:
-  - Wilbert Pumacay
-  - Ishika Singh
-  - Jiafei Duan
-  - Ranjay Krishna
-  - Jesse Thomason
-  - Dieter Fox
-  publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g88q6s
-  plugin: sources.py
-  file: sources.yaml
-- id: https://openreview.net/forum?id=nIU0ZFmptX
-  title: 'PerAct2: Benchmarking and Learning for Robotic Bimanual Manipulation Tasks'
+  - Yashraj Narang
+  - Iretiayo Akinola
+  publisher: 2025 IEEE International Conference on Robotics and Automation (ICRA)
+  date: '2025-05-19'
+  link: https://doi.org/hcd7hq
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/icra55743.2025.11128527
+  title: 'TWIN: Two-handed Intelligent Benchmark for Bimanual Manipulation'
   authors:
   - Markus Grotz
   - Mohit Shridhar
   - Yu-Wei Chao
   - Tamim Asfour
   - Dieter Fox
-  publisher: ''
-  date: '2024-11-08'
-  link: https://openreview.net/forum?id=nIU0ZFmptX
+  publisher: 2025 IEEE International Conference on Robotics and Automation (ICRA)
+  date: '2025-05-19'
+  link: https://doi.org/hcd7hr
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2510.01642
+  title: 'FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action
+    Models'
+  authors:
+  - Zijun Lin
+  - Jiafei Duan
+  - Haoquan Fang
+  - Dieter Fox
+  - Ranjay Krishna
+  - Cheston Tan
+  - Bihan Wen
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7ht
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2505.24853
+  title: 'DexMachina: Functional Retargeting for Bimanual Dexterous Manipulation'
+  authors:
+  - Zhao Mandi
+  - Yifan Hou
+  - Dieter Fox
+  - Yashraj Narang
+  - Ajay Mandlekar
+  - Shuran Song
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7hv
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2507.13097
+  title: 'GraspGen: A Diffusion-based Framework for 6-DOF Grasping with On-Generator
+    Training'
+  authors:
+  - Adithyavairavan Murali
+  - Balakumar Sundaralingam
+  - Yu-Wei Chao
+  - Wentao Yuan
+  - Jun Yamada
+  - Mark Carlson
+  - Fabio Ramos
+  - Stan Birchfield
+  - Dieter Fox
+  - Clemens Eppner
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7hw
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.52202/085713-3684
+  title: 'RobotSmith: Generative Robotic Tool Design for Acquisition of Complex Manipulation
+    Skills'
+  authors:
+  - Chunru Lin
+  - Haotian Yuan
+  - Yian Wang
+  - Xiaowen Qiu
+  - Tsun-Hsuan Johnson Wang
+  - Minghao Guo
+  - Bohan Wang
+  - Yashraj Narang
+  - Dieter Fox
+  - Chuang Gan
+  publisher: Advances in Neural Information Processing Systems 38
+  date: '2025-01-01'
+  link: https://doi.org/hcd7hx
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2510.14930
+  title: 'VT-Refine: Learning Bimanual Assembly with Visuo-Tactile Feedback via Simulation
+    Fine-Tuning'
+  authors:
+  - Binghao Huang
+  - Jie Xu
+  - Iretiayo Akinola
+  - Wei Yang
+  - Balakumar Sundaralingam
+  - Rowland O'Flaherty
+  - Dieter Fox
+  - Xiaolong Wang
+  - Arsalan Mousavian
+  - Yu-Wei Chao
+  - Yunzhu Li
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7hz
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2508.15755
+  title: Neural Robot Dynamics
+  authors:
+  - Jie Xu
+  - Eric Heiden
+  - Iretiayo Akinola
+  - Dieter Fox
+  - Miles Macklin
+  - Yashraj Narang
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7h2
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2503.04538
+  title: 'SRSA: Skill Retrieval and Adaptation for Robotic Assembly Tasks'
+  authors:
+  - Yijie Guo
+  - Bingjie Tang
+  - Iretiayo Akinola
+  - Dieter Fox
+  - Abhishek Gupta
+  - Yashraj Narang
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/g88mbp
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2509.18282
+  title: 'PEEK: Guiding and Minimal Image Representations for Zero-Shot Generalization
+    of Robot Manipulation Policies'
+  authors:
+  - Jesse Zhang
+  - Marius Memmel
+  - Kevin Kim
+  - Dieter Fox
+  - Jesse Thomason
+  - Fabio Ramos
+  - "Erdem B\u0131y\u0131k"
+  - Abhishek Gupta
+  - Anqi Li
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7h3
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/iros60139.2025.11247025
+  title: 'ACGD: Visual Multitask Policy Learning with Asymmetric Critic Guided Distillation'
+  authors:
+  - Krishnan Srinivasan
+  - Jie Xu
+  - Henry Ang
+  - Eric Heiden
+  - Dieter Fox
+  - Jeannette Bohg
+  - Animesh Garg
+  publisher: 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems
+    (IROS)
+  date: '2025-10-19'
+  link: https://doi.org/hcd7h4
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2509.01819
+  title: 'ManiFlow: A General Robot Manipulation Policy via Consistency Flow Training'
+  authors:
+  - Ge Yan
+  - Jiyue Zhu
+  - Yuquan Deng
+  - Shiqi Yang
+  - Ri-Zhao Qiu
+  - Xuxin Cheng
+  - Marius Memmel
+  - Ranjay Krishna
+  - Ankit Goyal
+  - Xiaolong Wang
+  - Dieter Fox
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7h5
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2508.07917
+  title: 'MolmoAct: Action Reasoning Models that can Reason in Space'
+  authors:
+  - Jason Lee
+  - Jiafei Duan
+  - Haoquan Fang
+  - Yuquan Deng
+  - Shuo Liu
+  - Boyang Li
+  - Bohan Fang
+  - Jieyu Zhang
+  - Yi Ru Wang
+  - Sangho Lee
+  - Winson Han
+  - Wilbert Pumacay
+  - Angelica Wu
+  - Rose Hendrix
+  - Karen Farley
+  - Eli VanderBilt
+  - Ali Farhadi
+  - Dieter Fox
+  - Ranjay Krishna
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7h6
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2505.09990
+  title: 'PointArena: Probing Multimodal Grounding Through Language-Guided Pointing'
+  authors:
+  - Long Cheng
+  - Jiafei Duan
+  - Yi Ru Wang
+  - Haoquan Fang
+  - Boyang Li
+  - Yushan Huang
+  - Elvis Wang
+  - Ainaz Eftekhar
+  - Jason Lee
+  - Wentao Yuan
+  - Rose Hendrix
+  - Noah A. Smith
+  - Fei Xia
+  - Dieter Fox
+  - Ranjay Krishna
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/hcd7h7
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arXiv.1703.01656
+  title: Reasoning About Liquids via Closed-Loop Simulation
+  authors:
+  - Connor Schenck
+  - Dieter Fox
+  publisher: arXiv
+  date: '2017-01-01'
+  link: https://doi.org/g88vrf
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2311.02337
@@ -295,41 +930,6 @@
   publisher: arXiv
   date: '2023-01-01'
   link: https://doi.org/g88q6v
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2310.17274
-  title: 'cuRobo: Parallelized Collision-Free Minimum-Jerk Robot Motion Generation'
-  authors:
-  - Balakumar Sundaralingam
-  - Siva Kumar Sastry Hari
-  - Adam Fishman
-  - Caelan Garrett
-  - Karl Van Wyk
-  - Valts Blukis
-  - Alexander Millane
-  - Helen Oleynikova
-  - Ankur Handa
-  - Fabio Ramos
-  - Nathan Ratliff
-  - Dieter Fox
-  publisher: arXiv
-  date: '2023-01-01'
-  link: https://doi.org/g88q6w
-  plugin: sources.py
-  file: sources.yaml
-- id: https://openreview.net/forum?id=dsw5CNOVn1
-  title: 'URDFormer: Constructing interactive Realistic Scenes from Real Images via
-    Simulation and Generative Modeling'
-  authors:
-  - Qiuyu Chen
-  - Marius Memmel
-  - Alex Fang
-  - Aaron Walsman
-  - Dieter Fox
-  - Abhishek Gupta
-  publisher: ''
-  date: '2023-10-13'
-  link: https://openreview.net/forum?id=dsw5CNOVn1
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2310.07018
@@ -1212,21 +1812,6 @@
   publisher: arXiv
   date: '2017-01-01'
   link: https://doi.org/g88vrd
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1109/LRA.2025.3542323
-  title: 'Aim My Robot: Precision Local Navigation to Any Object'
-  authors:
-  - Xiangyun Meng
-  - Xuning Yang
-  - Sanghun Jung
-  - Fabio Ramos
-  - Sri Sadhan Jujjavarapu
-  - Sanjoy Paul
-  - Dieter Fox
-  publisher: IEEE Robotics and Automation Letters
-  date: '2025-04-01'
-  link: https://doi.org/g858zn
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.1705.08080

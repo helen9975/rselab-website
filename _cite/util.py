@@ -86,21 +86,17 @@ def get_safe(item, path, default=None):
 
 
 def list_of_dicts(data):
-    """Ensure that data is a list of dictionaries."""
-    # Falls data None ist, setze es auf eine leere Liste
-    if data is None:
-        print("Data is None, setting it to an empty list.")
-        data = []
-    # Falls data keine Liste ist, setze es auf eine leere Liste
-    elif not isinstance(data, list):
-        print("Data is not a list, setting it to an empty list.")
-        data = []
-    # Falls Elemente in der Liste keine Dictionaries sind, versuche sie zu Dictionarys zu machen
-    elif not all(isinstance(entry, dict) for entry in data):
-        print("Not all elements are dictionaries, attempting to fix.")
-        data = [entry if isinstance(entry, dict) else {'id': entry} for entry in data]
+    """
+    check that data is a list of dicts
 
-    return data
+    None and an empty list both count as valid, so that an empty or fully
+    commented-out data file, or a plugin that finds no results, isn't an error
+    """
+
+    if data is None:
+        return True
+
+    return isinstance(data, list) and all(isinstance(entry, dict) for entry in data)
 
 
 
