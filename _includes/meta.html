@@ -26,19 +26,33 @@
     {{ site.subtitle }}. {{ description }}
   {%- endcapture %}
 {% endif %}
-{% capture url -%}
-  {{ site.url }}{{ site.baseurl }}
-{%- endcapture %}
+
+{% comment %}
+  the url of THIS page, absolute. previously every page reported the site root,
+  so each one claimed to be the homepage when shared
+{% endcomment %}
+{% assign url = page.url | absolute_url %}
 
 {% assign description = description | xml_escape %}
 
 {% assign png = "images/icon.png" | file_exists %}
 {% assign jpg = "images/icon.jpg" | file_exists %}
-{% assign icon = png | default: jpg | relative_url %}
+{% assign iconfile = png | default: jpg %}
+{% assign icon = iconfile | relative_url %}
+{% assign iconabs = iconfile | absolute_url %}
 
+{% comment %}
+  og:image and twitter:image must be absolute urls. a root-relative path is
+  silently ignored by every scraper, which is why no preview image showed
+{% endcomment %}
 {% assign jpg = "images/share.jpg" | file_exists %}
 {% assign png = "images/share.png" | file_exists %}
-{% assign share = jpg | default: png | relative_url %}
+{% assign share = jpg | default: png | absolute_url %}
+
+{% comment %}
+  the homepage has no front matter title, which left og:title empty
+{% endcomment %}
+{% assign sharetitle = fulltitle | default: site.title %}
 
 {% assign published = page.date | date_to_xmlschema %}
 {% assign updated = page.last_modified_at | date_to_xmlschema %}
@@ -50,22 +64,27 @@
 <title>{{ fulltitle }}</title>
 
 <link rel="icon" href="{{ icon }}">
+<link rel="canonical" href="{{ url }}">
 
-<meta name="title" content="{{ title }}">
+<meta name="title" content="{{ sharetitle }}">
 <meta name="description" content="{{ description }}">
 
-<meta property="og:title" content="{{ title }}">
-<meta property="og:site_title" content="{{ site.title | xml_escape }}">
+<meta property="og:title" content="{{ sharetitle }}">
+<meta property="og:site_name" content="{{ site.title | xml_escape }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url }}">
 <meta property="og:image" content="{{ share }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.title | xml_escape }}">
 <meta property="og:locale" content="en_US">
 
-<meta property="twitter:title" content="{{ title }}">
+<meta property="twitter:title" content="{{ sharetitle }}">
 <meta property="twitter:description" content="{{ description }}">
 <meta property="twitter:url" content="{{ url }}">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="{{ share }}">
+<meta property="twitter:image:alt" content="{{ site.title | xml_escape }}">
 
 {% if page.author %}
   <meta name="author" content="{{ page.author | xml_escape }}">
@@ -83,18 +102,20 @@
     "@context": "https://schema.org",
     {% if page.author %}
       "@type": "BlogPosting",
-      "author": { "@type": "Person", "name": "{{ title }}" },
+      "author": { "@type": "Person", "name": "{{ page.author | xml_escape }}" },
       "datePublished": "{{ published }}",
       "dateModified": "{{ updated }}",
     {% else %}
       "@type": "WebSite",
     {% endif %}
-    "name": "{{ title }}",
+    "name": "{{ sharetitle }}",
     "description": "{{ description }}",
-    "headline": "{{ title }}",
+    "headline": "{{ sharetitle }}",
+    "image": "{{ share }}",
     "publisher": {
       "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "{{ icon }}" }
+      "name": "{{ site.title | xml_escape }}",
+      "logo": { "@type": "ImageObject", "url": "{{ iconabs }}" }
     },
     "url": "{{ url }}"
   }
