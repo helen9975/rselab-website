@@ -139,29 +139,6 @@ img.full-background {
   object-fit: contain;
 }
 
-.feature-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 300px;
-}
-
-.feature-wrapper h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-
-.feature img {
-  width: 100%;
-  height: auto;
-  max-width: 300px;
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
-  min-width: 300px;
-  min-height: 250px;
-}
-
 .highlights-row {
   display: flex;
   justify-content: center;
@@ -175,6 +152,7 @@ img.full-background {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 1rem;
   max-width: 480px;
 }
@@ -194,9 +172,13 @@ img.full-background {
   transform: scale(1.05);
 }
 
-.feature-wrapper h3 {
+.feature-wrapper h2 {
   font-size: 1.25rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 0;
+  // the global h2 carries an underline, which reads as a divider inside a card
+  border-bottom: none;
+  padding-bottom: 0;
+  text-align: center;
 }
 
 .team-divider {
@@ -229,14 +211,22 @@ img.full-background {
 .hero-image-wrapper {
   position: relative;
   width: 90%;
-  //max-width: 1100px;
-  aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: var(--rounded);
   box-shadow: var(--shadow);
+
+  // the hero photo is a ~3:1 panorama, so shape the box to match it instead of
+  // cropping half the width away. the text sits in normal flow rather than
+  // absolutely centred, so the box can grow past min-height instead of the
+  // copy overflowing on narrow screens
+  display: grid;
+  place-items: center;
+  min-height: clamp(300px, 30vw, 460px);
 }
 
 .hero-image-wrapper img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -245,31 +235,39 @@ img.full-background {
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  //background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  // darkest through the middle, where the text sits. without a scrim the white
+  // text lands straight on a pale sky and is close to unreadable
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.55) 65%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   z-index: 2;
   color: white;
   text-align: center;
-  padding: 1rem;
-  width: 90%;
+  padding: 2rem 1.5rem;
+  width: 100%;
   max-width: 800px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.hero-text h3 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+.hero-text h1 {
+  // override the global h1, which is uppercase, centred and heavily margined
+  margin: 0 0 1rem 0;
+  font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+  font-weight: var(--semi-bold);
+  text-transform: none;
+  letter-spacing: 1px;
 }
 
 .hero-text p {
   font-size: 1rem;
+  margin: 0;
 }
