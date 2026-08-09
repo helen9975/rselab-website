@@ -24,10 +24,31 @@
 # Types seen on this author's record: preprint, conference-paper, article,
 # book-chapter, dataset, report, book, conference-abstract, editorial, other.
 
-- author: A5108257764 # Dieter Fox
+# OpenAlex splits Dieter Fox across many author records rather than one, and
+# new papers routinely land on a brand new single-work record. Listing only the
+# main id silently missed every 2026 paper, so list all known ids AND sweep by
+# raw author name to catch records that don't exist yet.
+- author:
+    - A5108257764 # main record, 511 works
+    - A5031489518
+    - A5130146151
+    - A5135398273
+    - A5137940387
+    - A5133302190
+    - A5126576649
+    - A5133227027
+    - A5135522340
+  # deliberately NOT A5057540280 — a different Dieter Fox (coal mining, fire
+  # detection). The "fields" restriction below guards against others like him.
+  name-search: dieter fox
+  fields:
+    - 17 # computer science
+    - 22 # engineering
   from-year: 2024
   exclude-types:
     - dataset
     - editorial
     - other
     - conference-abstract
+    - peer-review
+    - software

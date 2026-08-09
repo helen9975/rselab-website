@@ -30,9 +30,15 @@ select = ",".join(
     ]
 )
 
+# openalex "field" ids worth defaulting a name search to, so that an
+# unrelated researcher who happens to share a name doesn't drag in their work
+default_fields = [17, 22]  # computer science, engineering
+
 # entry keys that configure this plugin, and so shouldn't be copied onto sources
 config_keys = {
     "author",
+    "name-search",
+    "fields",
     "from-year",
     "to-year",
     "types",
@@ -48,10 +54,18 @@ def main(entry):
     returns list of sources to cite
     """
 
-    # get author id from entry, tolerating a full openalex url
-    _id = str(get_safe(entry, "author", "")).strip().rstrip("/").split("/")[-1]
-    if not _id:
-        raise Exception('No "author" key')
+    # get author ids from entry, tolerating a single id and full openalex urls
+    authors = get_safe(entry, "author", None) or []
+    if not isinstance(authors, list):
+        authors = [authors]
+    ids = [str(a).strip().rstrip("/").split("/")[-1] for a in authors]
+    ids = [i for i in ids if i]
+
+    # optional free-text author name to search for
+    name_search = str(get_safe(entry, "name-search", "") or "").strip()
+
+    if not ids and not name_search:
+        raise Exception('No "author" or "name-search" key')
 
     # optional filters
     from_year = get_safe(entry, "from-year", None)
@@ -61,21 +75,41 @@ def main(entry):
     require_doi = get_safe(entry, "require-doi", False) == True
     dedupe_versions = get_safe(entry, "dedupe-versions", True) != False
 
-    # build server-side filter (date range only, type filtering is done locally)
-    filters = [f"author.id:{_id}"]
+    # date range applies to every query (type filtering is done locally)
+    common = []
     if from_year:
-        filters.append(f"from_publication_date:{from_year}-01-01")
+        common.append(f"from_publication_date:{from_year}-01-01")
     if to_year:
-        filters.append(f"to_publication_date:{to_year}-12-31")
-
-    params = {"filter": ",".join(filters), "per-page": per_page, "select": select}
+        common.append(f"to_publication_date:{to_year}-12-31")
 
     # identify ourselves to get into openalex's faster "polite pool"
     email = os.environ.get("OPENALEX_EMAIL", "")
-    if email:
-        params["mailto"] = email
 
-    url = f"{endpoint}?{urlencode(params)}"
+    def build(filters):
+        params = {
+            "filter": ",".join(filters + common),
+            "per-page": per_page,
+            "select": select,
+        }
+        if email:
+            params["mailto"] = email
+        return f"{endpoint}?{urlencode(params)}"
+
+    # openalex regularly splits one researcher across several author records,
+    # and brand new papers often land on a freshly created one. So query every
+    # known id at once, and optionally sweep by raw author name to catch works
+    # sitting on a record we haven't been told about yet.
+    urls = []
+    if ids:
+        urls.append(build([f"author.id:{'|'.join(ids)}"]))
+    if name_search:
+        filters = [f"raw_author_name.search:{name_search}"]
+        fields = get_safe(entry, "fields", default_fields)
+        if fields:
+            filters.append(
+                "primary_topic.field.id:" + "|".join(f"fields/{f}" for f in fields)
+            )
+        urls.append(build(filters))
 
     # query api
     @log_cache
@@ -95,7 +129,12 @@ def main(entry):
                 break
         return works
 
-    works = query(url)
+    # run every query and merge, keyed by openalex work id to drop the overlap
+    merged = {}
+    for url in urls:
+        for work in query(url):
+            merged[get_safe(work, "id", "")] = work
+    works = list(merged.values())
 
     # filter by work type
     if types:

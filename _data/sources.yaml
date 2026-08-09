@@ -27,7 +27,7 @@
 
 - id: doi:10.48550/arXiv.2410.00371
 
-- id: doi:10.48550/arXiv.2409.19494
+- id: doi:10.1109/iros60139.2025.11245882 # OptiGrasp, published version of arXiv.2409.19494
 
 - id: doi:10.1007/978-3-031-73024-5_16
 
@@ -351,3 +351,11 @@
 - id: doi:10.1109/ICRA.2014.6907298
   awards:
     - "Finalist: ICRA Best Vision Paper Award"
+
+# Suppressions. OpenAlex sometimes holds a preprint and its published version
+# under titles too different to collapse automatically, which would render as
+# two cards. Hide the preprint and keep the published one.
+
+# 3D-MVP preprint, superseded by doi:10.1109/cvpr52734.2025.02098
+- id: doi:10.48550/arxiv.2406.18158
+  remove: true
