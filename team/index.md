@@ -8,7 +8,7 @@ nav:
 # Team
 
 
-## Faculty and Phd Students
+## Faculty, Postdocs, and PhD Students
 
 <div class="team-grid-wrapper">
   <div class="team-grid">
