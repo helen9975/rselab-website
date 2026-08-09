@@ -1,6 +1,8 @@
 ---
 ---
 
+{% include section.html size="full" %}
+
 <div class="hero-section">
   <div class="hero-image-wrapper">
     <img src="images/background.jpg" alt="Lab Overview">
@@ -13,6 +15,8 @@
     </div>
   </div>
 </div>
+
+{% include section.html %}
 
 <div class="highlights-row">
   <div class="feature-wrapper">

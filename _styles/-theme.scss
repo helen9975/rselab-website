@@ -205,15 +205,15 @@ img.full-background {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
 }
 
 .hero-image-wrapper {
   position: relative;
-  width: 90%;
+  // full bleed. as a 90%-wide rounded box with a drop shadow, sitting inside
+  // the 1000px column with the section's padding above it, the photo read as a
+  // card dropped onto the page rather than as the top of the page
+  width: 100%;
   overflow: hidden;
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
 
   // the hero photo is a ~3:1 panorama, so shape the box to match it instead of
   // cropping half the width away. the text sits in normal flow rather than
@@ -245,6 +245,20 @@ img.full-background {
     rgba(0, 0, 0, 0.55) 65%,
     rgba(0, 0, 0, 0.35) 100%
   );
+}
+
+// soften the bottom edge into the page, so the photo ends by dissolving rather
+// than by a hard horizontal cut
+.hero-image-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--background));
+  pointer-events: none;
 }
 
 .hero-text {
