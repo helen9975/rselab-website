@@ -42,6 +42,12 @@
 {% assign iconabs = iconfile | absolute_url %}
 
 {% comment %}
+  an svg favicon stays sharp at any tab size and in dark mode; the png above
+  remains the fallback for browsers that don't take svg icons
+{% endcomment %}
+{% assign iconsvg = "images/icon.svg" | file_exists | relative_url %}
+
+{% comment %}
   og:image and twitter:image must be absolute urls. a root-relative path is
   silently ignored by every scraper, which is why no preview image showed
 {% endcomment %}
@@ -63,7 +69,11 @@
 
 <title>{{ fulltitle }}</title>
 
-<link rel="icon" href="{{ icon }}">
+<link rel="icon" href="{{ icon }}" sizes="any">
+{% if iconsvg %}
+  <link rel="icon" type="image/svg+xml" href="{{ iconsvg }}">
+{% endif %}
+<link rel="apple-touch-icon" href="{{ icon }}">
 <link rel="canonical" href="{{ url }}">
 
 <meta name="title" content="{{ sharetitle }}">
