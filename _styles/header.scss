@@ -19,7 +19,10 @@ header {
   padding: 20px;
   box-shadow: var(--shadow);
   min-height: 80px;
-  margin-bottom: 1rem;
+  // no margin here: it left a strip of page background under the header, which
+  // showed as a gap above the full-bleed hero. spacing below the header is the
+  // job of each section's own padding
+  margin-bottom: 0;
 }
 
 .logo-nav-wrapper {
