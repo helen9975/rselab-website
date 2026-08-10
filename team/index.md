@@ -45,9 +45,47 @@ nav:
 
 ## Alumni
 
+{% assign senior = site.data.alumni | where_exp: "item", "item.degree == 'Postdoc' or item.degree == 'PhD'" %}
+{% assign junior = site.data.alumni | where_exp: "item", "item.degree == 'MS' or item.degree == 'Undergrad'" %}
+{% comment %}
+  anything with a missing or unrecognised degree, so that adding an entry
+  without one lists them here rather than dropping them off the page
+{% endcomment %}
+{% assign other = site.data.alumni | where_exp: "item", "item.degree != 'Postdoc' and item.degree != 'PhD' and item.degree != 'MS' and item.degree != 'Undergrad'" %}
+
+{% if senior.size > 0 %}
+
+### Postdocs and PhD Students
+{:.center}
+
 <ul class="alumni-list">
-  {% for alumni in site.data.alumni %}
+  {% for alumni in senior %}
     <li>{{ alumni.name }}</li>
   {% endfor %}
 </ul>
+
+{% endif %}
+
+{% if junior.size > 0 %}
+
+### Masters and Undergraduates
+{:.center}
+
+<ul class="alumni-list">
+  {% for alumni in junior %}
+    <li>{{ alumni.name }}</li>
+  {% endfor %}
+</ul>
+
+{% endif %}
+
+{% if other.size > 0 %}
+
+<ul class="alumni-list">
+  {% for alumni in other %}
+    <li>{{ alumni.name }}</li>
+  {% endfor %}
+</ul>
+
+{% endif %}
 
