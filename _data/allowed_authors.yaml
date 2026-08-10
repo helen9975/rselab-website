@@ -1,50 +1,60 @@
-- Markus Grotz  
-- Yi Li  
-- Marius Memmel  
-- Helen Wang  
-- Jiafei Duan  
-- Joel Jang  
-- Ge Yan  
-- Xiangyun Meng  
-- Wentao Yuan  
-- Qiuyu (Zoey) Chen  
-- Adam Fishman  
-- Aaron Walsman  
-- Mohit Shridhar  
-- Junha Roh  
-- Karthik Desingh  
-- Christopher Xie  
-- Vinitha Ranganeni  
-- Daniel Gordon  
-- Matt Schmittle  
-- Arunkumar Byravan  
-- Tanner Schmidt  
-- Franziska Meier  
-- Connor R. Schenck  
-- Yu Xiang  
-- Luis Puig  
-- Yuyin Sun  
-- Vladimir Korukov  
-- Peter Henry  
-- Richard Newcombe  
-- Byron Boots  
-- Cynthia Matuszek  
-- Evan Herbst  
-- Kevin Lai  
-- Marc Deisenroth  
-- Michael Krainin  
-- Lillian Chang  
-- Akin Sisbot  
-- Jonathan Ko  
-- Brian Ferris  
-- James McLurkin  
-- Hanna Pasula  
-- Lin Liao  
-- Donald Patterson  
-- Jeffrey Hightower  
-- Cody Kwok  
-- Ravi Kiran  
-- Julie Letchner  
-- Benson Limketkai  
-- Benjamin Stewart  
-- Kevin Sikorski  
+# Extra names counted as "lab members" when the OpenAlex plugin filters for
+# work Dieter Fox did with the lab (see require-coauthor in openalex.yaml).
+#
+# Current members and everyone in alumni.yaml are already included
+# automatically, so this file is only needed for:
+#   - people who publish under a different name than the site shows
+#   - collaborators and visitors who never had a page here
+#
+# Matching ignores case, punctuation, middle initials and nicknames, tolerates
+# "Family, Given" order, and allows a truncated surname. It still can't guess
+# a different name, so add those here.
+
+# publishing names that differ from the name on the team page
+- Yi Ru Wang # Helen Wang publishes under this name
+
+# former members and long-running collaborators without a page on the site
+- Markus Grotz
+- Xiangyun Meng
+- Wentao Yuan
+- Qiuyu (Zoey) Chen
+- Adam Fishman
+- Aaron Walsman
+- Mohit Shridhar
+- Junha Roh
+- Karthik Desingh
+- Christopher Xie
+- Vinitha Ranganeni
+- Daniel Gordon
+- Matt Schmittle
+- Arunkumar Byravan
+- Tanner Schmidt
+- Franziska Meier
+- Connor R. Schenck
+- Yu Xiang
+- Luis Puig
+- Yuyin Sun
+- Vladimir Korukov
+- Peter Henry
+- Richard Newcombe
+- Byron Boots
+- Cynthia Matuszek
+- Evan Herbst
+- Kevin Lai
+- Marc Deisenroth
+- Michael Krainin
+- Lillian Chang
+- Akin Sisbot
+- Jonathan Ko
+- Brian Ferris
+- James McLurkin
+- Hanna Pasula
+- Lin Liao
+- Donald Patterson
+- Jeffrey Hightower
+- Cody Kwok
+- Ravi Kiran
+- Julie Letchner
+- Benson Limketkai
+- Benjamin Stewart
+- Kevin Sikorski

@@ -44,6 +44,12 @@
   fields:
     - 17 # computer science
     - 22 # engineering
+  # Dieter Fox also publishes through industry appointments, so keep only work
+  # he did with someone else from the lab. The roster is built from the team
+  # page, alumni.yaml and allowed_authors.yaml — add publishing names that
+  # differ from the site's spelling to that last file.
+  require-coauthor: true
+  lead-author: Dieter Fox
   from-year: 2024
   exclude-types:
     - dataset

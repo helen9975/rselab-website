@@ -1,6 +1,7 @@
 import os
 import re
 import json
+from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode
 from util import *
@@ -44,8 +45,74 @@ config_keys = {
     "types",
     "exclude-types",
     "require-doi",
+    "require-coauthor",
+    "lead-author",
     "dedupe-versions",
 }
+
+
+def name_tokens(name):
+    """
+    reduce a name to comparable lowercase tokens, dropping nicknames in
+    parentheses, punctuation, and single-letter middle initials
+    """
+
+    name = re.sub(r"\([^)]*\)", " ", name or "")
+    name = re.sub(r"[^A-Za-z\s-]", " ", name).lower()
+    return [t for t in name.split() if len(t) > 1]
+
+
+def names_match(a, b):
+    """
+    compare two token lists, tolerating the ways openalex mangles names
+    """
+
+    if not a or not b:
+        return False
+
+    # openalex sometimes inverts to "Family, Given", so compare unordered
+    if {a[0], a[-1]} == {b[0], b[-1]}:
+        return True
+
+    # ...and sometimes truncates a surname, e.g. "Marius Memme" for "Memmel"
+    if a[0] == b[0]:
+        long, short = sorted([a[-1], b[-1]], key=len, reverse=True)
+        if len(short) >= 4 and long.startswith(short):
+            return True
+
+    return False
+
+
+def load_roster():
+    """
+    every name associated with the lab: current members, alumni, and the
+    supplementary list in allowed_authors.yaml (which is also where publishing
+    names that differ from the site's spelling belong)
+    """
+
+    names = []
+
+    for path in Path.cwd().glob("_members/*.md"):
+        text = path.read_text(encoding="utf8")
+        match = re.search(r"^---\s*\n(.*?)\n---", text, re.DOTALL)
+        if not match:
+            continue
+        found = re.search(r"^name:\s*(.+)$", match.group(1), re.MULTILINE)
+        if found:
+            names.append(found.group(1).strip())
+
+    for path in ["_data/alumni.yaml", "_data/allowed_authors.yaml"]:
+        if not Path(path).is_file():
+            continue
+        for entry in load_data(path) or []:
+            name = entry.get("name", "") if isinstance(entry, dict) else entry
+            if isinstance(name, str) and name.strip():
+                # alumni are stored as "Name (Degree, Year, Where)". strip only
+                # the trailing group, so a nickname earlier in the name survives
+                # e.g. "Qiuyu (Zoey) Chen (PhD, 2024)" -> "Qiuyu (Zoey) Chen"
+                names.append(re.sub(r"\s*\([^()]*\)\s*$", "", name).strip())
+
+    return [t for t in (name_tokens(n) for n in names) if t]
 
 
 def main(entry):
@@ -73,7 +140,12 @@ def main(entry):
     types = get_safe(entry, "types", None)
     exclude_types = get_safe(entry, "exclude-types", None) or []
     require_doi = get_safe(entry, "require-doi", False) == True
+    require_coauthor = get_safe(entry, "require-coauthor", False) == True
+    lead_author = name_tokens(get_safe(entry, "lead-author", "") or "")
     dedupe_versions = get_safe(entry, "dedupe-versions", True) != False
+
+    if require_coauthor and not lead_author:
+        raise Exception('"require-coauthor" needs a "lead-author" to check against')
 
     # date range applies to every query (type filtering is done locally)
     common = []
@@ -142,6 +214,17 @@ def main(entry):
     if exclude_types:
         works = [w for w in works if get_safe(w, "type", "") not in exclude_types]
 
+    # the lead author may hold appointments outside the lab, so optionally keep
+    # only work they did with someone else from the lab
+    if require_coauthor:
+        roster = load_roster()
+        before = len(works)
+        works = [w for w in works if lab_work(w, lead_author, roster)]
+        log(
+            f"Dropped {before - len(works)} work(s) without a lab co-author",
+            indent=3,
+        )
+
     # openalex indexes a preprint and its published version as separate works,
     # so collapse them down to the most "final" version of each title
     if dedupe_versions:
@@ -166,6 +249,29 @@ def main(entry):
         sources.append(source)
 
     return sources
+
+
+def lab_work(work, lead_author, roster):
+    """
+    true if the lead author appears alongside at least one other lab name
+    """
+
+    authors = [
+        name_tokens(get_safe(a, "author.display_name", ""))
+        for a in get_safe(work, "authorships", []) or []
+    ]
+    authors = [a for a in authors if a]
+
+    if not any(names_match(a, lead_author) for a in authors):
+        return False
+
+    return any(
+        names_match(a, member)
+        for a in authors
+        if not names_match(a, lead_author)
+        for member in roster
+        if not names_match(member, lead_author)
+    )
 
 
 def to_source(work):
