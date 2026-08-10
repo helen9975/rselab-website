@@ -10,7 +10,7 @@ header {
   padding: 20px;
   box-shadow: var(--shadow);
   min-height: 80px;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .logo-nav-wrapper {
