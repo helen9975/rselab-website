@@ -1,0 +1,55 @@
+.outings {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+}
+
+.outings-track {
+  display: flex;
+  width: max-content;
+  animation: outings-scroll 80s linear infinite;
+}
+
+.outings-track img {
+  flex: none;
+  height: 220px;
+  width: auto;
+  margin-right: 1rem;
+  object-fit: cover;
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow);
+}
+
+section[data-size=full] .outings-track img {
+  border-radius: var(--rounded);
+}
+
+@keyframes outings-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.outings:hover .outings-track,
+.outings:focus-within .outings-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 800px) {
+  .outings-track img {
+    height: 150px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .outings {
+    overflow-x: auto;
+  }
+  .outings-track {
+    animation: none;
+  }
+}
+
+/*# sourceMappingURL=outings.css.map */
