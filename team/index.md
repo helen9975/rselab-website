@@ -32,11 +32,16 @@ nav:
 </div>
 
 
+{% assign undergrads = site.members | where: "role", "Undergrad" %}
+{% if undergrads.size > 0 %}
+
 ## Undergrad Students
 
 <div class="team-grid-wrapper">
   {% include list.html data="members" component="portrait" filter="role == 'Undergrad'" grid=true %}
 </div>
+
+{% endif %}
 
 ## Alumni
 
