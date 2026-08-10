@@ -1,0 +1,84 @@
+---
+---
+
+// Automatically scrolling strip of lab outing photos.
+//
+// The track holds the photo set twice and slides left by exactly half its
+// width, so the second copy lands where the first started and the loop is
+// seamless. Spacing lives in margin-right on each photo rather than in a flex
+// gap, because a gap would leave the two halves unequal and cause a jump.
+
+.outings {
+  width: 100%;
+  overflow: hidden;
+
+  // fade both edges so photos enter and leave instead of being chopped off
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+}
+
+.outings-track {
+  display: flex;
+  width: max-content;
+  animation: outings-scroll 80s linear infinite;
+}
+
+.outings-track img {
+  flex: none;
+  height: 220px;
+  width: auto;
+  margin-right: 1rem;
+  object-fit: cover;
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow);
+}
+
+// the enclosing section is data-size="full", which flattens the corners of any
+// image inside it, so put the rounding back for these
+section[data-size="full"] .outings-track img {
+  border-radius: var(--rounded);
+}
+
+@keyframes outings-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+// let people stop it to look at a photo
+.outings:hover .outings-track,
+.outings:focus-within .outings-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 800px) {
+  .outings-track img {
+    height: 150px;
+  }
+}
+
+// never animate at people who have asked us not to; let them scroll by hand
+@media (prefers-reduced-motion: reduce) {
+  .outings {
+    overflow-x: auto;
+  }
+
+  .outings-track {
+    animation: none;
+  }
+}

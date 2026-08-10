@@ -43,6 +43,33 @@ nav:
 
 {% endif %}
 
+{% comment %}
+  every photo in images/outings is picked up automatically, so adding one to
+  that folder is all it takes to put it in the strip
+{% endcomment %}
+{% assign outings = site.static_files | where_exp: "file", "file.path contains '/images/outings/'" | sort: "path" %}
+{% if outings.size > 0 %}
+
+## Lab Outings
+
+{% include section.html size="full" %}
+
+<div class="outings">
+  <div class="outings-track">
+    {% for photo in outings %}
+      <img src="{{ photo.path | relative_url }}" alt="Lab outing" loading="lazy">
+    {% endfor %}
+    {% comment %} second copy makes the loop seamless; hidden from screen readers {% endcomment %}
+    {% for photo in outings %}
+      <img src="{{ photo.path | relative_url }}" alt="" aria-hidden="true" loading="lazy">
+    {% endfor %}
+  </div>
+</div>
+
+{% include section.html %}
+
+{% endif %}
+
 ## Alumni
 
 {% assign senior = site.data.alumni | where_exp: "item", "item.degree == 'Postdoc' or item.degree == 'PhD'" %}
