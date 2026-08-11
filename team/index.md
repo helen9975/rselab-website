@@ -50,11 +50,9 @@ nav:
 {% assign outings = site.static_files | where_exp: "file", "file.path contains '/images/outings/'" | sort: "path" %}
 {% if outings.size > 0 %}
 
-## Lab Outings
-
 {% include section.html size="full" %}
 
-<div class="outings">
+<div class="outings" role="group" aria-label="Photos from lab outings and retreats">
   <div class="outings-track">
     {% for photo in outings %}
       <img src="{{ photo.path | relative_url }}" alt="Lab outing" loading="lazy">
