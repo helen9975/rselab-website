@@ -30,6 +30,21 @@
   link: https://doi.org/g8754w
   plugin: sources.py
   file: sources.yaml
+- id: doi:10.1109/LRA.2025.3542323
+  title: 'Aim My Robot: Precision Local Navigation to Any Object'
+  authors:
+  - Xiangyun Meng
+  - Xuning Yang
+  - Sanghun Jung
+  - Fabio Ramos
+  - Sri Sadhan Jujjavarapu
+  - Sanjoy Paul
+  - Dieter Fox
+  publisher: IEEE Robotics and Automation Letters
+  date: '2025-04-01'
+  link: https://doi.org/g858zn
+  plugin: sources.py
+  file: sources.yaml
 - id: doi:10.1145/3654777.3676413
   title: 'EVE: Enabling Anyone to Train Robots using Augmented Reality'
   authors:
@@ -44,19 +59,33 @@
   link: https://doi.org/g8756w
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.1109/LRA.2025.3542323
-  title: 'Aim My Robot: Precision Local Navigation to Any Object'
+- id: doi:10.1109/icra55743.2025.11128527
+  title: 'TWIN: Two-handed Intelligent Benchmark for Bimanual Manipulation'
   authors:
-  - Xiangyun Meng
-  - Xuning Yang
-  - Sanghun Jung
-  - Fabio Ramos
-  - Sri Sadhan Jujjavarapu
-  - Sanjoy Paul
+  - Markus Grotz
+  - Mohit Shridhar
+  - Yu-Wei Chao
+  - Tamim Asfour
   - Dieter Fox
-  publisher: IEEE Robotics and Automation Letters
-  date: '2025-04-01'
-  link: https://doi.org/g858zn
+  publisher: 2025 IEEE International Conference on Robotics and Automation (ICRA)
+  date: '2025-05-19'
+  link: https://doi.org/hcd7hr
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.1109/iros60139.2025.11245882
+  title: 'OptiGrasp: Optimized Grasp Pose Detection Using RGB Images for Warehouse
+    Picking Robots'
+  authors:
+  - Soofiyan Atar
+  - Yi Li
+  - Markus Grotz
+  - Michael Wolf
+  - Dieter Fox
+  - Joshua Smith
+  publisher: 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems
+    (IROS)
+  date: '2025-10-19'
+  link: https://doi.org/hcd7v6
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2406.18915
@@ -283,22 +312,6 @@
   link: https://doi.org/g88qtk
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.1109/iros60139.2025.11245882
-  title: 'OptiGrasp: Optimized Grasp Pose Detection Using RGB Images for Warehouse
-    Picking Robots'
-  authors:
-  - Soofiyan Atar
-  - Yi Li
-  - Markus Grotz
-  - Michael Wolf
-  - Dieter Fox
-  - Joshua Smith
-  publisher: 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems
-    (IROS)
-  date: '2025-10-19'
-  link: https://doi.org/hcd7v6
-  plugin: sources.py
-  file: sources.yaml
 - id: doi:10.1007/978-3-031-73024-5_16
   title: "Learning to\_Build by\_Building Your Own Instructions"
   authors:
@@ -333,19 +346,6 @@
   - type: website
     text: Project Page
     link: https://sam2act.github.io/
-- id: doi:10.1109/icra55743.2025.11128527
-  title: 'TWIN: Two-handed Intelligent Benchmark for Bimanual Manipulation'
-  authors:
-  - Markus Grotz
-  - Mohit Shridhar
-  - Yu-Wei Chao
-  - Tamim Asfour
-  - Dieter Fox
-  publisher: 2025 IEEE International Conference on Robotics and Automation (ICRA)
-  date: '2025-05-19'
-  link: https://doi.org/hcd7hr
-  plugin: openalex.py
-  file: openalex.yaml
 - id: doi:10.48550/arxiv.2510.01642
   title: 'FailSafe: Reasoning and Recovery from Failures in Vision-Language-Action
     Models'
@@ -682,6 +682,21 @@
   publisher: arXiv
   date: '2026-01-01'
   link: https://doi.org/hcd7wm
+  plugin: openalex.py
+  file: openalex.yaml
+- id: doi:10.48550/arxiv.2608.10860
+  title: "Flex-$\u03C0$: A Multi-Stream World-Action Model with Compute Flexibility"
+  authors:
+  - Ge Yan
+  - Jinghao Liu
+  - Yuzhi Fan
+  - Lei Cai
+  - Minwen Liao
+  - Jesse Zhang
+  - Dieter Fox
+  publisher: arXiv
+  date: '2026-01-01'
+  link: https://doi.org/hcfvgq
   plugin: openalex.py
   file: openalex.yaml
 - id: doi:10.48550/arxiv.2412.02818
