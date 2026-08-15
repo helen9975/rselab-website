@@ -1,28 +1,44 @@
 .outings {
+  position: relative;
   width: 100%;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  --outings-height: clamp(190px, 24vw, 300px);
+  height: var(--outings-height);
+  mask-image: linear-gradient(to right, transparent 0%, #000 7%, #000 93%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 7%, #000 93%, transparent 100%);
+}
+
+.outings::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--background));
+  pointer-events: none;
+}
+
+section:has(.outings) + section > h1:first-child {
+  margin-top: 0;
 }
 
 .outings-track {
   display: flex;
   width: max-content;
-  animation: outings-scroll 80s linear infinite;
+  height: 100%;
+  animation: outings-scroll var(--outings-duration, 80s) linear infinite;
 }
 
 .outings-track img {
   flex: none;
-  height: 220px;
+  height: 100%;
   width: auto;
-  margin-right: 1rem;
+  margin-right: 4px;
   object-fit: cover;
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
-}
-
-section[data-size=full] .outings-track img {
-  border-radius: var(--rounded);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 @keyframes outings-scroll {
@@ -38,11 +54,6 @@ section[data-size=full] .outings-track img {
   animation-play-state: paused;
 }
 
-@media (max-width: 800px) {
-  .outings-track img {
-    height: 150px;
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .outings {
     overflow-x: auto;
