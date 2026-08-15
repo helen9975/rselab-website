@@ -5,6 +5,32 @@ nav:
   tooltip: About our team
 ---
 
+{% comment %}
+  every photo in images/outings is picked up automatically, so adding one to
+  that folder is all it takes to put it in the strip. the duration scales with
+  the number of photos so the band always drifts at the same speed
+{% endcomment %}
+{% assign outings = site.static_files | where_exp: "file", "file.path contains '/images/outings/'" | sort: "path" %}
+{% if outings.size > 0 %}
+
+{% include section.html size="full" %}
+
+<div class="outings" role="group" aria-label="Photos from lab outings and retreats" style="--outings-duration: {{ outings.size | times: 8 }}s">
+  <div class="outings-track">
+    {% for photo in outings %}
+      <img src="{{ photo.path | relative_url }}" alt="Lab outing">
+    {% endfor %}
+    {% comment %} second copy makes the loop seamless; hidden from screen readers {% endcomment %}
+    {% for photo in outings %}
+      <img src="{{ photo.path | relative_url }}" alt="" aria-hidden="true">
+    {% endfor %}
+  </div>
+</div>
+
+{% include section.html %}
+
+{% endif %}
+
 # Team
 
 
@@ -40,31 +66,6 @@ nav:
 <div class="team-grid-wrapper">
   {% include list.html data="members" component="portrait" filter="role == 'Undergrad'" grid=true %}
 </div>
-
-{% endif %}
-
-{% comment %}
-  every photo in images/outings is picked up automatically, so adding one to
-  that folder is all it takes to put it in the strip
-{% endcomment %}
-{% assign outings = site.static_files | where_exp: "file", "file.path contains '/images/outings/'" | sort: "path" %}
-{% if outings.size > 0 %}
-
-{% include section.html size="full" %}
-
-<div class="outings" role="group" aria-label="Photos from lab outings and retreats">
-  <div class="outings-track">
-    {% for photo in outings %}
-      <img src="{{ photo.path | relative_url }}" alt="Lab outing" loading="lazy">
-    {% endfor %}
-    {% comment %} second copy makes the loop seamless; hidden from screen readers {% endcomment %}
-    {% for photo in outings %}
-      <img src="{{ photo.path | relative_url }}" alt="" aria-hidden="true" loading="lazy">
-    {% endfor %}
-  </div>
-</div>
-
-{% include section.html %}
 
 {% endif %}
 

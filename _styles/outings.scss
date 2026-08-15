@@ -1,7 +1,8 @@
 ---
 ---
 
-// Automatically scrolling strip of lab outing photos.
+// Automatically scrolling band of lab outing photos, sitting flush under the
+// header at the top of the team page.
 //
 // The track holds the photo set twice and slides left by exactly half its
 // width, so the second copy lands where the first started and the loop is
@@ -9,46 +10,71 @@
 // gap, because a gap would leave the two halves unequal and cause a jump.
 
 .outings {
+  position: relative;
   width: 100%;
   overflow: hidden;
 
-  // fade both edges so photos enter and leave instead of being chopped off
+  // photos are 440px tall at source, so this never upscales them
+  --outings-height: clamp(190px, 24vw, 300px);
+  height: var(--outings-height);
+
+  // fade both ends so photos drift in and out instead of being chopped off
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    #000 5%,
-    #000 95%,
+    #000 7%,
+    #000 93%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    #000 5%,
-    #000 95%,
+    #000 7%,
+    #000 93%,
     transparent 100%
   );
+}
+
+// soften the bottom edge into the page, the same way the home page hero does,
+// so the band dissolves into the heading below rather than ending on a hard cut
+.outings::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--background));
+  pointer-events: none;
+}
+
+// the fade already reads as space, so the page title doesn't need its usual
+// 40px on top as well. harmless where :has isn't supported — the title just
+// keeps the standard margin
+section:has(.outings) + section > h1:first-child {
+  margin-top: 0;
 }
 
 .outings-track {
   display: flex;
   width: max-content;
-  animation: outings-scroll 80s linear infinite;
+  height: 100%;
+  // set per page from the photo count, so adding photos lengthens the loop
+  // rather than speeding it up
+  animation: outings-scroll var(--outings-duration, 80s) linear infinite;
 }
 
 .outings-track img {
   flex: none;
-  height: 220px;
+  height: 100%;
   width: auto;
-  margin-right: 1rem;
+  // a hairline seam rather than a 1rem gap: nine separately rounded, shadowed
+  // cards drifting past read as clutter, one continuous band reads as a masthead
+  margin-right: 4px;
   object-fit: cover;
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
-}
-
-// the enclosing section is data-size="full", which flattens the corners of any
-// image inside it, so put the rounding back for these
-section[data-size="full"] .outings-track img {
-  border-radius: var(--rounded);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 @keyframes outings-scroll {
@@ -64,12 +90,6 @@ section[data-size="full"] .outings-track img {
 .outings:hover .outings-track,
 .outings:focus-within .outings-track {
   animation-play-state: paused;
-}
-
-@media (max-width: 800px) {
-  .outings-track img {
-    height: 150px;
-  }
 }
 
 // never animate at people who have asked us not to; let them scroll by hand
