@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  --outings-height: clamp(190px, 24vw, 300px);
+  --outings-height: clamp(130px, 15vw, 200px);
   height: var(--outings-height);
   mask-image: linear-gradient(to right, transparent 0%, #000 7%, #000 93%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 7%, #000 93%, transparent 100%);
