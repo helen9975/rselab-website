@@ -14,8 +14,9 @@
   width: 100%;
   overflow: hidden;
 
+  // deliberately short: this is a band across the top of the page, not a hero.
   // photos are 440px tall at source, so this never upscales them
-  --outings-height: clamp(190px, 24vw, 300px);
+  --outings-height: clamp(130px, 15vw, 200px);
   height: var(--outings-height);
 
   // fade both ends so photos drift in and out instead of being chopped off
