@@ -1,4 +1,16 @@
 ---
+# old WordPress URLs with no counterpart on this site land on the homepage
+redirect_from:
+  - /videos/
+  - /courses/
+  - /robots/
+  - /checkout-dieters-iros-2017-plenary/
+  - /tanner-wins-best-robotic-vision-paper-award-at-icra-2017/
+  - /aruns-and-tanners-papers-are-finalists-for-icra-best-vision-paper-awrd/
+  - /2017-aaai-classic-paper-award-goes-to-monte-carlo-localization-paper/
+  - /welcome-sidd/
+  - /yuyin-finished-her-phd/
+  - /dieters-icra-16-keynote-posted/
 ---
 
 {% include section.html size="full" %}
