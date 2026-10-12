@@ -3,6 +3,9 @@ title: Team
 nav:
   order: 3
   tooltip: About our team
+# old WordPress URL for this page
+redirect_from:
+  - /people/
 ---
 
 {% comment %}
